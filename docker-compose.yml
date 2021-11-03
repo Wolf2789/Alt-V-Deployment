@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+
+  db:
+    container_name: "${COMPOSE_PROJECT_NAME}_db"
+    image: skazuki/alpine-mongodb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_HOST: '%'
+      MYSQL_HOST: '%'
+    env_file:
+    - .env
+    volumes:
+    - ./db:/data/db
+
+  server:
+    container_name: "${COMPOSE_PROJECT_NAME}_server"
+    image: altv/server:custom
+    build: .docker
+    restart: unless-stopped
+    ports:
+    - '127.0.0.1:7788:7788'
+    volumes:
+    - ./server.cfg:/altv/server.cfg
+    - ./resources:/altv/resources
