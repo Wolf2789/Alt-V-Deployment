@@ -1,5 +1,9 @@
 .env
+
 server.cfg
+!.docker/server.cfg
+
 db/*
 resources/*
-!.docker/server.cfg
+
+!/**/.gitkeep
