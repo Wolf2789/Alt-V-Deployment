@@ -19,8 +19,14 @@ services:
     image: altv/server:custom
     build: .docker
     restart: unless-stopped
+    depends_on:
+    - db
     ports:
-    - '127.0.0.1:7788:7788'
+    - '2789:2789'
+    - '2789:2789/udp'
     volumes:
     - ./server.cfg:/altv/server.cfg
+    - ./package.json:/altv/package.json
+    - ./package-lock.json:/altv/package-lock.json
+    - ./node_modules:/altv/node_modules
     - ./resources:/altv/resources

@@ -1,0 +1,28 @@
+{
+    "name": "altv-deployment",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "index.js",
+    "scripts": {
+        "update": "altv-pkg d release"
+    },
+    "dependencies": {
+        "chalk": "^4.0.0",
+        "download": "^7.1.0"
+    },
+    "devDependencies": {
+        "@altv/types-client": "^1.7.6",
+        "@altv/types-natives": "^1.4.2",
+        "@altv/types-server": "^1.9.6",
+        "@altv/types-shared": "^1.0.1",
+        "@altv/types-webview": "^1.0.2",
+        "altv-pkg": "^1.1.0",
+        "prettier": "^1.18.2"
+    },
+    "prettier": {
+        "printWidth": 120,
+        "tabWidth": 4,
+        "singleQuote": true,
+        "bracketSpacing": true
+    }
+}
