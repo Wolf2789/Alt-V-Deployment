@@ -1,6 +1,6 @@
-# Alt:V basic containerized server
+# alt:V basic containerized server
 
-This repository contains basic dockerized-containerized Alt:V server application packed with js-module, default server data and lightweight MongoDB for simple and adjustable server hosting.
+This repository contains basic dockerized-containerized alt:V server application packed with js-module, default server data and lightweight MongoDB for simple and adjustable server hosting.
 
 ## Requirements:
 * Docker
@@ -26,3 +26,9 @@ This repository contains basic dockerized-containerized Alt:V server application
 
 ## Start services
 `$ docker-compose up -d`
+
+---
+
+# Thanks
+* alt:V team for their [free alternative multiplayer client for GTA:V](https://altv.mp).
+* Lhoerion for his awesome [alt:V server update script](https://github.com/Lhoerion/altv-serverupdater).
